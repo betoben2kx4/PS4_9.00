@@ -1,0 +1,157 @@
+<html manifest="Cache.manifest">
+<head>
+<title>PS4 Jailbreak HOST 9.00</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    background-color: rgb(32, 33, 36);
+    background-image: url('bgmain.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+  }
+  .btn {
+    background-color: rgb(32, 33, 36);
+    color: rgb(255, 255, 255);
+    border: solid 1px rgb(53, 54, 58);
+    border-radius: 20px;
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .btn:hover {
+    background-color: rgb(53, 54, 58);
+    cursor: pointer;
+  }
+  .credit {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10%;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+<script>
+  window.onload = function(e){if(sessionStorage.Queue==null){sessionStorage.Queue="";}else if(sessionStorage.Queue!=""){executependingqueue(sessionStorage.Queue);}};
+  window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!"};
+  window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};
+  window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";setTimeout(function(){document.getElementById("progress").innerHTML="Successfully Cached. Now Turn Off internet and reopen the page!"; }, 1500);};
+</script>
+<script>
+  function allset() {
+    document.getElementById("progress").innerHTML = "You're all Set!";
+  }
+</script>
+<script src="main.js"></script>
+<script src="payload.js"></script>
+<script src="int64.js"></script>
+<script src="rop.js"></script>
+<script src="kexploit.js"></script>
+<script src="webkit.js"></script>
+</head>
+<body>
+  <div style="text-align: center;">
+    <br>
+    <h1 style="text-shadow: 0px 0px 5px;">PS4 Jailbreak HOST 9.00</h1>
+    <p id="progress" style="font-size: 16px;">idle</p>
+    <br>
+    <button class="btn" onclick="loadghen212()">GoldHEN 2.1.2</button>
+    <button class="btn" onclick="loadghen222()">GoldHEN 2.2.2</button>
+    <button class="btn" onclick="loadghen23b2()">GoldHEN 2.3b2</button>
+  </div>
+
+  <div style="text-align: center;">
+    <input type="text" id="psip" value="localhost" style="display: none;">
+    <div>
+      <p style="font-size: 18px;font-weight: bold;">Payload(s)</p>
+      <button class="btn" onclick="app2usb()">App2USB</button>
+      <button class="btn" onclick="gamedumper()">Game Dumper</button>
+      <button class="btn" onclick="dupdate()">Disable Updates</button>
+      <button class="btn" onclick="eupdate()">Enable Updates</button>
+      <br>
+      <button class="btn" onclick="bdb()">Backup DB</button>
+      <button class="btn" onclick="rdb()">Restore DB</button>
+      <button class="btn" onclick="ps4debug()" style="color: rgb(0, 255, 0);">PS4 Debug</button>
+      <button class="btn" onclick="webrte()" style="color: rgb(0, 100, 255);">WebRTE</button>
+      <br>
+      <button onclick="permanentuart()" class="btn">Permanent UART</button>
+    </div>
+
+    <div class="credit">
+      <p><span style="color: rgb(0, 100, 255);">Designed by:</span> bishalqx980</p>
+      <p>Contact with me on Telegram if you have any kind of issues or something to report! <a href="http://t.me/bishalqx980" target="_blank" style="text-decoration: none;color: rgb(255, 255, 0);text-shadow: 0px 0px 5px;">@bishalqx980</a></p>
+      <p><span style="color: rgb(255, 0, 0);">Many Many Thansks to:</span> Sleirsgoevy, SiSTRo, ChendoChap, Specter, Znullptr & Other devs in this scene...</p>
+    </div>
+<script>
+  function loadghen212() {
+    document.getElementById("progress").innerHTML = "Loading..."
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', "goldhen212.bin", true);
+  xhr.responseType = 'arraybuffer';
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // Skip padding for 9.00 Loader
+      var tmp = new Uint8Array(xhr.response.byteLength);
+      tmp.set(new Uint8Array(xhr.response), 0);
+
+      payloadShellcode = new Uint32Array(tmp);
+      setTimeout(poc, 1500);
+    }
+  };
+  xhr.onerror = function () {
+    alert('Issue Retreiving Payload!');
+  };
+  xhr.send();
+  }
+
+  function loadghen222() {
+    document.getElementById("progress").innerHTML = "Loading..."
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', "goldhen222.bin", true);
+  xhr.responseType = 'arraybuffer';
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // Skip padding for 9.00 Loader
+      var tmp = new Uint8Array(xhr.response.byteLength);
+      tmp.set(new Uint8Array(xhr.response), 0);
+
+      payloadShellcode = new Uint32Array(tmp);
+      setTimeout(poc, 1500);
+    }
+  };
+  xhr.onerror = function () {
+    alert('Issue Retreiving Payload!');
+  };
+  xhr.send();
+  }
+
+  function loadghen23b2() {
+    document.getElementById("progress").innerHTML = "Loading..."
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', "goldhen23b2.bin", true);
+  xhr.responseType = 'arraybuffer';
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // Skip padding for 9.00 Loader
+      var tmp = new Uint8Array(xhr.response.byteLength);
+      tmp.set(new Uint8Array(xhr.response), 0);
+
+      payloadShellcode = new Uint32Array(tmp);
+      setTimeout(poc, 1500);
+    }
+  };
+  xhr.onerror = function () {
+    alert('Issue Retreiving Payload!');
+  };
+  xhr.send();
+  }
+</script>
+</body>
+</html>
