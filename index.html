@@ -2,37 +2,80 @@
 <head>
 <title>PS4 Jailbreak HOST 9.00</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 <style>
   body {
-    background-color: rgb(32, 33, 36);
-    background-image: url('bgmain.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  .top {
+    background-color: rgb(239, 239, 239);
+    position: sticky;
+    display: flex;
+    top: 0;
+    border: solid .5px;
+    padding: 5px;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
   }
   .btn {
-    background-color: rgb(32, 33, 36);
-    color: rgb(255, 255, 255);
-    border: solid 1px rgb(53, 54, 58);
-    border-radius: 20px;
     text-align: center;
-    width: 200px;
-    padding: 10px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
-    margin-left: 1px;
-    margin-right: 1px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    width: 180px;
+    padding: 10px;
+    border: solid 1px;
+    border-radius: 2.5px;
+    margin-top: .5%;
+    margin-bottom: .5%;
+    margin-left: .5%;
+    margin-right: .5%;
   }
   .btn:hover {
-    background-color: rgb(53, 54, 58);
     cursor: pointer;
   }
+  .changelog {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    border: solid 1px;
+    width: 720px;
+    box-shadow: 0px 0px 10px inset;
+    position: fixed;
+    top: 100;
+    right: 10;
+  }
   .credit {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
     font-weight: bold;
     font-size: 20px;
-    margin-top: 10%;
+    border: solid 1px;
+    width: 500px;
+    box-shadow: 0px 0px 10px inset;
+    position: fixed;
+    bottom: 110;
+  }
+  .bottom {
+    text-align: left;
+    background-color: rgb(239, 239, 239);
+    position: fixed;
+    bottom: 0;
+    border: solid .5px;
+    padding: 10px;
+    width: 100vw;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .C12 {
+    font-size: 18px;
+    background: none;
+    border: solid 1px;
+    width: 125px;
+    height: 30px;
+    cursor: pointer;
   }
   ::-webkit-scrollbar {
     display: none;
@@ -55,40 +98,76 @@
 <script src="rop.js"></script>
 <script src="kexploit.js"></script>
 <script src="webkit.js"></script>
+<script>
+  function changelog() {
+    var toggle = document.getElementById("C1");
+    if (toggle.style.display == "block") {
+      toggle.style.display = "none"
+    }
+    else {
+      toggle.style.display = "block"
+    }
+  }
+  function credit() {
+    var toggle = document.getElementById("C2");
+    if (toggle.style.display == "block") {
+      toggle.style.display = "none"
+    }
+    else {
+      toggle.style.display = "block"
+    }
+  }
+</script>
 </head>
 <body>
-  <div style="text-align: center;">
+  <div class="top">
+    <p style="text-align: left;font-weight: bold;font-size: 22px;flex: 50%;">PS4 Jailbreak HOST 9.00</p>
+    <p style="flex: 50%;text-align: right;"><button onclick="changelog()" class="C12">Changelog's</button></p>
+  </div>
+  <div class="changelog" id="C1">
+    <pre>
+      13-07-2022 v1.00
+      - v1.00 launch
+
+      19-07-2022 v2.00
+      - Added favicon
+      - Totally design change (to make it simple & minimalist)
+      - Removed background image 
+    </pre>
+  </div>
+  <div>
+    <p id="progress" style="font-size: 16px;">-----</p>
     <br>
-    <h1 style="text-shadow: 0px 0px 5px;">PS4 Jailbreak HOST 9.00</h1>
-    <p id="progress" style="font-size: 16px;">idle</p>
-    <br>
-    <button class="btn" onclick="loadghen212()" style="color: rgb(255, 255, 0);">GoldHEN 2.1.2</button>
-    <button class="btn" onclick="loadghen222()" style="color: rgb(255, 255, 0);">GoldHEN 2.2.2</button>
-    <button class="btn" onclick="loadghen23b2()" style="color: rgb(255, 255, 0);">GoldHEN 2.3b2</button>
+    <button class="btn" onclick="loadghen212()" style="background-color: rgb(255, 255, 0);">GoldHEN 2.1.2</button>
+    <button class="btn" onclick="loadghen222()" style="background-color: rgb(255, 255, 0);">GoldHEN 2.2.2</button>
+    <button class="btn" onclick="loadghen23b2()" style="background-color: rgb(255, 255, 0);">GoldHEN 2.3b2</button>
   </div>
 
-  <div style="text-align: center;">
-    <input type="text" id="psip" value="localhost" style="display: none;">
-    <div>
-      <p style="font-size: 18px;font-weight: bold;">Payload(s)</p>
-      <button class="btn" onclick="app2usb()">App2USB</button>
-      <button class="btn" onclick="gamedumper()">Game Dumper</button>
-      <button class="btn" onclick="dupdate()">Disable Updates</button>
-      <button class="btn" onclick="eupdate()">Enable Updates</button>
-      <br>
-      <button class="btn" onclick="bdb()">Backup DB</button>
-      <button class="btn" onclick="rdb()">Restore DB</button>
-      <button class="btn" onclick="ps4debug()" style="color: rgb(0, 255, 0);">PS4 Debug</button>
-      <button class="btn" onclick="webrte()" style="color: rgb(0, 100, 255);">WebRTE</button>
-      <br>
-      <button onclick="permanentuart()" class="btn">Permanent UART</button>
-    </div>
+  <input type="text" id="psip" value="localhost" style="display: none;">
+  <div>
+    <p style="font-size: 18px;font-weight: bold;">Payload(s)</p>
+    <button class="btn" onclick="app2usb()">App2USB</button>
+    <button class="btn" onclick="gamedumper()">Game Dumper</button>
+    <button class="btn" onclick="dupdate()">Disable Updates</button>
+    <button class="btn" onclick="eupdate()">Enable Updates</button>
+    <br>
+    <button class="btn" onclick="bdb()">Backup DB</button>
+    <button class="btn" onclick="rdb()">Restore DB</button>
+    <button class="btn" onclick="ps4debug()" style="color: rgb(0, 255, 0);">PS4 Debug</button>
+    <button class="btn" onclick="webrte()" style="color: rgb(0, 102, 255);">WebRTE</button>
+    <br>
+    <button onclick="permanentuart()" class="btn">Permanent UART</button>
+  </div>
 
-    <div class="credit">
-      <p><span style="color: rgb(0, 100, 255);">Designed by:</span> bishalqx980</p>
-      <p>Contact with me on Telegram if you have any kind of issues or something to report! <a href="http://t.me/bishalqx980" target="_blank" style="text-decoration: none;color: rgb(255, 255, 0);text-shadow: 0px 0px 5px;">@bishalqx980</a></p>
-      <p><span style="color: rgb(255, 0, 0);">Many Many Thanks to:</span> Sleirsgoevy, SiSTRo, ChendoChap, Specter, Znullptr & Other devs in this scene...</p>
-    </div>
+  <div class="credit" id="C2">
+    <p><span style="color: rgb(255, 0, 0);">Many Many Thanks to:</span> Sleirsgoevy, SiSTRo, ChendoChap, Specter, Znullptr & Other devs in this scene...</p>
+  </div>
+  
+  <div class="bottom">
+    <button onclick="credit()" class="C12">Credits</button>
+    <p>Contact with me on Telegram <a href="http://t.me/bishalqx980" target="_blank" style="color: rgb(0, 0, 0);font-weight: bold;">@bishalqx980</a> if you have any kind of issues or something to report!</p>
+  </div>
+
 <script>
   function loadghen212() {
     document.getElementById("progress").innerHTML = "Loading..."
