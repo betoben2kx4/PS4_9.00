@@ -5,8 +5,8 @@
 13-07-2022 v1.00
 - v1.00 launch
 
-### v1.00 Image 
-<img src="v1.00.jpg">
+### Version 1.00 Image 
+![Version 1.00](url "v1.00.jpg")
 
 19-07-2022 v2.00
 - Added favicon
