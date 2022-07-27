@@ -1,0 +1,245 @@
+<html manifest="CacheN.manifest">
+<head>
+<title>PS4 Jailbreak HOST 9.00</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<style>
+  body {
+    text-align: left;
+    background-image: url("900N.jpg");
+    background-color: rgb(53, 54, 58);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+  }
+  .top {
+    background-color: rgba(32, 33, 36, 0.5);
+    position: sticky;
+    display: flex;
+    top: 0;
+    border: solid 1px;
+    padding: 5px;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    border-top: none;
+  }
+  .btn {
+    text-align: center;
+    background: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+    width: 180px;
+    padding: 10px;
+    border: solid 1px;
+    border-radius: 10px;
+    margin-top: .5%;
+    margin-bottom: .5%;
+    margin-left: .5%;
+    margin-right: .5%;
+  }
+  .btn:hover {
+    cursor: pointer;
+  }
+  .changelog {
+    display: none;
+    background-color: rgba(32, 33, 36, 0.5);
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    border: solid 1px;
+    border-radius: 5px;
+    width: 720px;
+    box-shadow: 0px 0px 10px;
+    position: fixed;
+    top: 100;
+    right: 10;
+  }
+  .credit {
+    display: none;
+    background-color: rgba(32, 33, 36, 0.5);
+    font-weight: bold;
+    font-size: 20px;
+    border: solid 1px;
+    border-radius: 5px;
+    width: 500px;
+    box-shadow: 0px 0px 10px;
+    position: fixed;
+    bottom: 150;
+    text-align: center;
+  }
+  .bottom {
+    text-align: left;
+    background-color: rgba(32, 33, 36, 0.5);
+    position: fixed;
+    bottom: 0;
+    border: solid 1px;
+    padding: 10px;
+    width: 100vw;
+    margin-left: -10px;
+    margin-right: -10px;
+    border-bottom: none;
+  }
+  .C12 {
+    font-size: 18px;
+    background: none;
+    color: rgb(255, 255, 255);
+    border: solid rgb(53, 54, 58) 1px;
+    width: 125px;
+    height: 30px;
+    cursor: pointer;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+<script>
+  window.onload = function(e){if(sessionStorage.Queue==null){sessionStorage.Queue="";}else if(sessionStorage.Queue!=""){executependingqueue(sessionStorage.Queue);}};
+  window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!"};
+  window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};
+  window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";setTimeout(function(){document.getElementById("progress").innerHTML="Successfully Cached. Now Turn Off internet and reopen the page!"; }, 1500);};
+</script>
+<script>
+  function allset() {
+    document.getElementById("progress").innerHTML = "You're all Set!";
+  }
+</script>
+<script src="main.js"></script>
+<script src="payload.js"></script>
+<script src="int64.js"></script>
+<script src="rop.js"></script>
+<script src="kexploit.js"></script>
+<script src="webkit.js"></script>
+<script>
+  function changelog() {
+    var toggle = document.getElementById("C1");
+    if (toggle.style.display == "block") {
+      toggle.style.display = "none"
+    }
+    else {
+      toggle.style.display = "block"
+    }
+  }
+  function credit() {
+    var toggle = document.getElementById("C2");
+    if (toggle.style.display == "block") {
+      toggle.style.display = "none"
+    }
+    else {
+      toggle.style.display = "block"
+    }
+  }
+</script>
+</head>
+<body>
+  <div class="top">
+    <p style="text-align: left;font-weight: bold;font-size: 22px;flex: 50%;">PS4 Jailbreak HOST 9.00</p>
+    <p style="flex: 50%;text-align: right;"><button onclick="changelog()" class="C12">Changelog's</button></p>
+  </div>
+  <div class="changelog" id="C1">
+    <pre>
+      27-07-2022 v1.00
+      - Public release
+    </pre>
+  </div>
+  <div>
+    <p id="progress" style="font-size: 16px;text-align: center;">-----</p>
+    <br>
+    <button class="btn" onclick="loadghen212()" style="color: rgb(255, 255, 0);">GoldHEN 2.1.2</button>
+    <button class="btn" onclick="loadghen222()" style="color: rgb(255, 255, 0);">GoldHEN 2.2.2</button>
+    <button class="btn" onclick="loadghen23b2()" style="color: rgb(255, 255, 0);">GoldHEN 2.3b2</button>
+  </div>
+
+  <input type="text" id="psip" value="localhost" style="display: none;">
+  <div>
+    <p style="font-size: 18px;font-weight: bold;margin-left: 1%;">Payload(s)</p>
+    <button class="btn" onclick="app2usb()">App2USB</button>
+    <button class="btn" onclick="gamedumper()">Game Dumper</button>
+    <button class="btn" onclick="dupdate()">Disable Updates</button>
+    <button class="btn" onclick="eupdate()">Enable Updates</button>
+    <br>
+    <button class="btn" onclick="bdb()">Backup DB</button>
+    <button class="btn" onclick="rdb()">Restore DB</button>
+    <button class="btn" onclick="ps4debug()" style="color: rgb(0, 255, 0);">PS4 Debug</button>
+    <button class="btn" onclick="webrte()" style="color: rgb(0, 102, 255);">WebRTE</button>
+    <br>
+    <button onclick="permanentuart()" class="btn">Permanent UART</button>
+  </div>
+
+  <div class="credit" id="C2">
+    <p><span style="color: rgb(255, 0, 0);">Many Many Thanks to:</span> Sleirsgoevy, SiSTRo, ChendoChap, Specter, Znullptr & Other devs in this scene...</p>
+  </div>
+  
+  <div class="bottom">
+    <button onclick="credit()" class="C12">Credits</button>
+    <p>Join our Telegram Group <a href="http://t.me/teampsjb" target="_blank" style="color: rgb(255, 0, 0);font-weight: bold;">@PS3/PS4 Jailbreak</a> & Channel <a href="http://t.me/psjbchannel" target="_blank" style="color: rgb(255, 0, 0);font-weight: bold;">@PS3/PS4 Jailbreak Channel</a></p>
+    <p>Contact with me on Telegram <a href="http://t.me/bishalqx980" target="_blank" style="color: rgb(255, 0, 0);font-weight: bold;">@bishalqx980</a> if you have any kind of issues or something to report!</p>
+  </div>
+
+<script>
+  function loadghen212() {
+    document.getElementById("progress").innerHTML = "Loading..."
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', "goldhen212.bin", true);
+  xhr.responseType = 'arraybuffer';
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // Skip padding for 9.00 Loader
+      var tmp = new Uint8Array(xhr.response.byteLength);
+      tmp.set(new Uint8Array(xhr.response), 0);
+
+      payloadShellcode = new Uint32Array(tmp);
+      setTimeout(poc, 1500);
+    }
+  };
+  xhr.onerror = function () {
+    alert('Issue Retreiving Payload!');
+  };
+  xhr.send();
+  }
+
+  function loadghen222() {
+    document.getElementById("progress").innerHTML = "Loading..."
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', "goldhen222.bin", true);
+  xhr.responseType = 'arraybuffer';
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // Skip padding for 9.00 Loader
+      var tmp = new Uint8Array(xhr.response.byteLength);
+      tmp.set(new Uint8Array(xhr.response), 0);
+
+      payloadShellcode = new Uint32Array(tmp);
+      setTimeout(poc, 1500);
+    }
+  };
+  xhr.onerror = function () {
+    alert('Issue Retreiving Payload!');
+  };
+  xhr.send();
+  }
+
+  function loadghen23b2() {
+    document.getElementById("progress").innerHTML = "Loading..."
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', "goldhen23b2.bin", true);
+  xhr.responseType = 'arraybuffer';
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // Skip padding for 9.00 Loader
+      var tmp = new Uint8Array(xhr.response.byteLength);
+      tmp.set(new Uint8Array(xhr.response), 0);
+
+      payloadShellcode = new Uint32Array(tmp);
+      setTimeout(poc, 1500);
+    }
+  };
+  xhr.onerror = function () {
+    alert('Issue Retreiving Payload!');
+  };
+  xhr.send();
+  }
+</script>
+</body>
+</html>

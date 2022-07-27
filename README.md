@@ -12,3 +12,7 @@
 - Added favicon
 - Totally design change (to make it simple & minimalist)
 - Removed background image 
+
+27-07-2022 v2.1
+- 900N added
+
