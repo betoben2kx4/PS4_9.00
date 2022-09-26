@@ -1,7 +1,5 @@
-# bishalqx980.github.io
-
-### PS4 Jailbreak HOST 9.00
-
+# PS4 Exploit HOST 9.00
+---
 13-07-2022 v1.00
 - v1.00 launch
 
