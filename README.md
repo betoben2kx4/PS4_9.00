@@ -6,7 +6,8 @@
 19-07-2022 v2.00
 - Added favicon
 - Totally design change (to make it simple & minimalist)
-- Removed background image 
+- Removed background image
+- Many More things Added & Removed
 
 27-07-2022 v2.1
 - 900N added
@@ -15,7 +16,9 @@
 07-09-2022 v3.00
 - Redesigned (Totally Change)
 - 900N Removed
+- Many More things Added & Removed
 
 26-09-2022 v4.00
 - Redesigned (Totally Change)
 - Added ESP8266 Support (Auto USB Plug/Unplug)
+- Many More things Added & Removed
