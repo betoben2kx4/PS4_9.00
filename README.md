@@ -10,10 +10,12 @@
 
 27-07-2022 v2.1
 - 900N added
+- Added background image
 
 07-09-2022 v3.00
-- Redesigned
+- Redesigned (Totally Change)
 - 900N Removed
 
 26-09-2022 v4.00
-- NEW Redesigned
+- Redesigned (Totally Change)
+- Added ESP8266 Support (Auto USB Plug/Unplug)
