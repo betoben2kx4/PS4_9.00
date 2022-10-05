@@ -1,0 +1,105 @@
+body {
+    background-image: url("bgimg.jpg");
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+}
+.notification {
+    top: 3%;
+    right: 2%;
+    position: fixed;
+    background-color: rgba(30, 30, 50, 0.5);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px;
+    font-weight: bold;
+    animation: slide 500ms;
+}
+@keyframes slide {
+    from {
+        transform: translateX(150%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+.notificationHide {
+    animation: hideslide 500ms;
+}
+@keyframes hideslide {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(150%);
+    }
+}
+.title {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+}
+.titletxt {
+    margin-left: 2%;
+}
+hr {
+    border: solid 1px rgba(255, 255, 255, 0.2);
+}
+.btnArea {
+    width: 65%;
+    padding: 10px;
+    margin-left: 1%;
+}
+.btn {
+    width: 220px;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px;
+    margin-top: 1%;
+    border: solid 1px rgb(45, 58, 66);
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+.btn:hover {
+    background-color: rgba(45, 58, 66, 0.2);
+    border-color: rgb(45, 58, 66);
+    color: rgb(255, 255, 255);
+}
+.bottomSec {
+    bottom: 0;
+    position: fixed;
+    padding: 10px;
+    width: 95%;
+    margin: auto;
+}
+.btnT2 {
+    width: 140px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+}
+.btnT2:hover {
+    background-color: rgb(230, 230, 230);
+}
+.credits {
+    font-size: 12px;
+    margin-left: 1%;
+    font-style: italic;
+}
+.bishalqx980 {
+    text-decoration: none;
+    color: rgb(0, 100, 255);
+}
