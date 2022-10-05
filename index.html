@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" manifest="Cache.manifest">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <script src="js.js"></script>
+    <script src="esp.js"></script>
+    <script src="int64.js"></script>
+    <script src="kexploit.js"></script>
+    <script src="rop.js"></script>
+    <script src="webkit.js"></script>
+    <script src="main.js"></script>
+    <script src="payload.js"></script>
+    <script src="cache.js"></script>
+    <title>PlayStation 4</title>
+</head>
+<body onload="load()">
+    <input type="text" name="" id="psip" value="localhost" hidden>
+    <div id="notify" style="display: none;">
+        <p id="log"></p>
+    </div>
+    <div class="div0">
+        <span id="date">{DATE}</span> <span id="clock">{CLOCK}</span>
+        <h1>PlayStation 4 - 9.00 Exploit</h1>
+    </div>
+    <div class="btnSec">
+        <h2>GoldHEN Section</h2>
+        <button class="btn" onclick="poc()">GoldHEN 2.2.4</button><br>
+        <h2>Other Useful Payload's</h2>
+        <button class="btn2" onclick="app2usb()">App2USB</button>
+        <button class="btn2" onclick="gamedumper()">App/Game Dumper</button>
+        <button class="btn2" onclick="bdb()">Backup Database</button><br>
+        <button class="btn2" onclick="rdb()">Restore Database</button>
+        <button class="btn2" onclick="dupdate()">Disable System Updates</button>
+        <button class="btn2" onclick="eupdate()">Enable System Updates</button><br>
+        <button class="btn2" onclick="ps4debug()">PS4 Debug</button>
+        <button class="btn2" onclick="webrte()">WebRTE</button>
+    </div>
+    <div class="bottomSec">
+        <p>Web Designed & Hosted by <a href="https://bishalqx980.github.io/bishalqx980" target="_blank" class="bishalqx980">@bishalqx980</a></p>
+        <p><span id="jsChk">{JaveScript Enable/Disable Check}</span> / <span id="Sys">{Which System you are using}</span></p> <span class="releaseNote"><a href="https://bishalqx980.github.io/PS4_9.00/README.md" target="_blank"><button class="releasebtn">Release Note</button></a></span>
+    </div>
+</body>
+</html>
