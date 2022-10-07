@@ -18,3 +18,7 @@
 26-09-2022 v4.00
 - NEW Redesigned
 - Added ESP8266 Support (Soldered)
+
+07-10-2022 v5.00
+- Simple Design
+- Check out yourself 😊
