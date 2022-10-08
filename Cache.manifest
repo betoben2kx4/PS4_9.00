@@ -1,11 +1,18 @@
 CACHE MANIFEST 
 
 CACHE: 
+app2usb.bin
+appdumper.bin
+backupdb.bin
+Cache.manifest
+dupdates.bin
+eupdates.bin
 GoldHEN224.bin
 index.html
 main.js
 payload.html
 payload.js
+restoredb.bin
 
 NETWORK: 
 * 
