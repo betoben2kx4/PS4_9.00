@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Web Payload Sender</title>
+    <script src="main.js"></script>
+    <script src="payload.js"></script>
+    <style>
+        body {
+            width: 80%;
+            margin: auto;
+            margin-top: 1%;
+            background-color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        .title {
+            color: rgb(0, 0, 0);
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            overflow: auto;
+        }
+        #psip {
+            outline: none;
+            box-shadow: 0px 0px 2px;
+            border: none;
+            padding: 5px;
+            float: right;
+        }
+        .btn {
+            background: rgb(255, 255, 255);
+            border: none;
+            box-shadow: 0px 0px 1px;
+            font-style: italic;
+            padding: 10px;
+            width: 200px;
+            cursor: pointer;
+            margin-top: 1%;
+        }
+        .btn:hover {
+            background: rgb(0, 0, 0, 0.05);
+        }
+        .bottomSec {
+            bottom: 0;
+            position: fixed;
+            padding: 10px;
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+        .credits {
+            font-size: 12px;
+            margin-left: 1%;
+            font-style: italic;
+        }
+        .bishalqx980 {
+            text-shadow: 0px 0px 10px;
+            text-decoration: none;
+            font-weight: bold;
+            animation: colorChange 20s infinite;
+        }
+        .bishalqx980:hover {
+            text-decoration: underline;
+        }
+        @keyframes colorChange {
+            0% {
+                color: rgb(255, 255, 0);
+            }
+            25% {
+                color: rgb(255, 0, 100);
+            }
+            50% {
+                color: rgb(0, 100, 255);
+            }
+            100% {
+                color: rgb(255, 255, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span>Web Payload Sender</span>
+        <input type="text" name="" id="psip" value="localhost" placeholder="PS4 IP HERE">
+    </div>
+    <hr style="opacity: 50%;">
+    <p id="log" style="text-align: center;">`${update}`</p>
+    <div style="text-align: center;margin-top: 3%;">
+        <button class="btn" onclick="app2usb()">App2USB</button>
+        <button class="btn" onclick="gamedumper()">Game Dumper</button><br>
+        <button class="btn" onclick="dupdate()">Disable System Update</button>
+        <button class="btn" onclick="eupdate()">Enable System Update</button><br>
+        <button class="btn" onclick="bdb()">Backup Database</button>
+        <button class="btn" onclick="rdb()">Restore Database</button>
+    </div>
+    <div class="bottomSec">
+        <span class="credits">Web-Design and Hosted by <a href="https://bishalqx980.github.io/bishalqx980" target="_blank" class="bishalqx980">@bishalqx980</a></span><br>
+        <span class="credits">Many Many Thanks To All contributor's of PS4 Scene</span>
+    </div>
+</body>
+</html>

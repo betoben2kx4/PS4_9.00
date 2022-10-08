@@ -1296,7 +1296,7 @@
             setTimeout(loadBIN,1000);
         }
     </script>
-    <script> // Cache js
+    <script>
         window.applicationCache.ondownloading=function() {
             document.getElementById('notify').style.display = ''
             document.getElementById('notify').className = 'notification'
@@ -1312,110 +1312,7 @@
             document.getElementById('notify').className = 'notification'
             document.getElementById("log").innerHTML="Page Cached Successfully!";
             setTimeout(function(){document.getElementById("log").innerHTML="AppCache Completed. Now Turn Off the Internet & Reopen the Page."; }, 1500);
-        } 
-    </script>
-    <script> // payload sender js
-    var getPayload = function(payload, onLoadEndCallback) {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', payload);
-        xhr.send();
-        xhr.responseType = "arraybuffer";
-        xhr.onload = function (event) {
-            if (onLoadEndCallback) onLoadEndCallback(xhr, event);
-        };
-      }
-      
-      var sendPayload = function(url, data, onLoadEndCallback) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", url, true);
-        xhr.send(data);
-      
-        xhr.onload = function (event) {
-            if (onLoadEndCallback) onLoadEndCallback(xhr, event);
-        };
-      }
-      
-      function LoadviaGoldhen(PLfile){
-        var PS4IP = document.getElementById("psip").value;
-              var xhr = new XMLHttpRequest();
-          xhr.open("POST", `http://${PS4IP}:9090/status`);
-              xhr.send();
-              xhr.onerror = function(){
-                  document.getElementById('notify').style.display = ''
-                  document.getElementById('notify').className = 'notification'
-                  document.getElementById('log').innerHTML = "Error, First Enable Binloader Server from GoldHEN Settings.";
-                  alert('Error, First Enable Binloader Server from GoldHEN Settings.');
-                  return;
-              };
-              xhr.onload = function(){
-                  var responseJson = JSON.parse(xhr.responseText);
-                  if (responseJson.status=="ready"){
-                getPayload(PLfile, function (xhr) {
-                      if ((xhr.status === 200 || xhr.status === 304) && xhr.response) {
-                         //Sending bins via IP POST Method
-                 sendPayload(`http://${PS4IP}:9090`, xhr.response, function (xhr) {
-                  if (xhr.status === 200) {
-                    log.innerHTML="Payload Loaded.";
-                  }else{
-                      document.getElementById('notify').style.display = ''
-                      document.getElementById('notify').className = 'notification'
-                      document.getElementById('log').innerHTML="Can't send the payload.";
-                     return;
-                  }
-                          })
-                      }
-                  });
-                  }
-                  else {
-                      alert("Cannot Load Payload Because binloader Server Is Busy.");
-                      return;
-                  }
-              };
-          }
-    </script>
-    <script> // payload text
-    function app2usb() {
-        document.getElementById('notify').style.display = ''
-        document.getElementById('notify').className = 'notification'
-        document.getElementById("log").innerHTML="Please wait... Sending Payload!";
-        PLfile = "app2usb.bin";
-        LoadviaGoldhen(PLfile);
-      }
-      function gamedumper() {
-        document.getElementById('notify').style.display = ''
-        document.getElementById('notify').className = 'notification'
-        document.getElementById("log").innerHTML="Please wait... Sending Payload!";
-        PLfile = "appdumper.bin";
-        LoadviaGoldhen(PLfile);
-      }
-      function dupdate() {
-        document.getElementById('notify').style.display = ''
-        document.getElementById('notify').className = 'notification'
-        document.getElementById("log").innerHTML="Please wait... Sending Payload!";
-        PLfile = "dupdates.bin";
-        LoadviaGoldhen(PLfile);
-      }
-      function eupdate() {
-        document.getElementById('notify').style.display = ''
-        document.getElementById('notify').className = 'notification'
-        document.getElementById("log").innerHTML="Please wait... Sending Payload!";
-        PLfile = "eupdates.bin";
-        LoadviaGoldhen(PLfile);
-      }
-      function bdb() {
-        document.getElementById('notify').style.display = ''
-        document.getElementById('notify').className = 'notification'
-        document.getElementById("log").innerHTML="Please wait... Sending Payload!";
-        PLfile = "backup.bin";
-        LoadviaGoldhen(PLfile);
-      }
-      function rdb() {
-        document.getElementById('notify').style.display = ''
-        document.getElementById('notify').className = 'notification'
-        document.getElementById("log").innerHTML="Please wait... Sending Payload!";
-        PLfile = "restore.bin";
-        LoadviaGoldhen(PLfile);
-      }
+        }
     </script>
     <div id="notify" style="display: none;">
         <p id="log"></p>
@@ -1423,14 +1320,9 @@
     <div class="title">
         <h1>PlayStation 4</h1>
     </div><br>
-    <input type="text" name="" id="psip" value="localhost" hidden>
-    <button class="btn" onclick="poc()">GoldHEN 2.2.4</button><br>
-    <button class="btn" onclick="app2usb()">App2USB</button>
-    <button class="btn" onclick="gamedumper()">Game Dumper</button>
-    <button class="btn" onclick="dupdate()">Disable Updates</button><br>
-    <button class="btn" onclick="eupdate()">Enable Updates</button>
-    <button class="btn" onclick="bdb()">Backup Database</button>
-    <button class="btn" onclick="rdb()">Restore Database</button>
+    <button class="btn" onclick="poc()">GoldHEN 2.2.4</button>
+    <hr style="opacity: 50%;width: 50%;margin-top: 2%;margin-bottom: 2%;">
+    <a href="payload.html" target="_blank" class="payloadCss">Other Payload's</a>
     <div class="bottomSec">
         <span class="credits">Web-Design and Hosted by <a href="https://bishalqx980.github.io/bishalqx980" target="_blank" class="bishalqx980">@bishalqx980</a></span><br>
         <span class="credits">Many Many Thanks To All contributor's of PS4 Scene</span>
@@ -1439,7 +1331,7 @@
         function loadmsg() {
             document.getElementById('notify').style.display = ''
             document.getElementById('notify').className = 'notification'
-            document.getElementById('log').innerHTML = 'Insert USB Now or Wait for ESP Execute...!'
+            document.getElementById('log').innerHTML = 'Insert USB Now or Wait for ESP Emulation...!'
         }
     </script>
     <style>
@@ -1456,7 +1348,7 @@
             top: 4%;
             right: 6%;
             position: fixed;
-            background-color: rgba(30, 30, 50, 0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             color: rgb(255, 255, 255);
             padding: 10px;
             border-radius: 5px;
@@ -1476,7 +1368,7 @@
             color: rgb(0, 0, 0);
             border-radius: 5px;
             padding: 10px;
-            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
             overflow: auto;
         }
         .btn {
@@ -1485,12 +1377,20 @@
             box-shadow: 0px 0px 1px;
             font-style: italic;
             padding: 5px;
-            margin-top: 1%;
-            width: 130px;
+            width: 120px;
             cursor: pointer;
         }
         .btn:hover {
             background: rgb(0, 0, 0, 0.05);
+        }
+        .payloadCss {
+            color: rgb(0, 100, 255);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .payloadCss:hover {
+            border-bottom: solid 2px;
+            border-radius: 5px;
         }
         .bottomSec {
             bottom: 0;
@@ -1506,11 +1406,8 @@
         }
         .bishalqx980 {
             color: rgb(0, 100, 255);
-            font-weight: bold;
             text-decoration: none;
-        }
-        .bishalqx980:hover {
-            border-bottom: solid 1px;
+            font-weight: bold;
         }
     </style>
 </body>
