@@ -26,3 +26,6 @@
 08-10-2022 v5.1
 - Bug FIX
 - Added Web Payload Sender
+
+13-10-2022 V6.0
+- Surprise 💣
