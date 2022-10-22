@@ -29,3 +29,7 @@
 
 13-10-2022 V6.0
 - Surprise 💣
+
+22-10-2022 V7.00
+- New Design 
+https://bishalqx980.github.io/PS4_9.00/ps4v7
