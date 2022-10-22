@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlayStation 4 (V7)</title>
 </head>
-<body onload="load()">
+<body>
     <script> //int64
         function int64(low, hi) {
             this.low = (low >>> 0);
@@ -1293,7 +1293,7 @@
         }
         function goldhen(){
             document.getElementById('log').innerHTML = 'USB Exfat_hax Loaded Successfully! Jailbreak Done.' // by @bishalqx980
-            PLfile = "GoldHEN224.bin";
+            PLfile = "GoldHEN212.bin";
             setTimeout(loadBIN,1000);
         }
     </script>
@@ -1312,7 +1312,7 @@
             document.getElementById('notify').style.display = ''
             document.getElementById('notify').className = 'notification'
             document.getElementById("log").innerHTML="Page Cached Successfully!";
-            setTimeout(function(){document.getElementById("log").innerHTML="AppCache Completed. Turn off Internet & reopen PS4 Browser!"; }, 1500);
+            setTimeout(function(){document.getElementById("log").innerHTML="AppCache Completed. Turn of Internet & reopen PS4 Browser!"; }, 1500);
         }
     </script>
     <div id="notify" style="display: none;">
@@ -1323,20 +1323,10 @@
     </div><br>
     <button class="btn" onclick="poc()" id="tmp"><img src="GoldHEN.png" alt="PS4Slim Logo" width="100px"></button>
     <div class="bottomSec">
-        <p class="credits">System Info: <span id="FWVer"></span></p>
         <span class="credits">Web-Design and Hosted by <a href="https://bishalqx980.github.io/bishalqx980/" class="bishalqx980">@bishalqx980</a></span><br>
         <span class="credits">Many Many Thanks To All contributor's of PS4 Scene</span>
     </div>
     <script>
-        function load() {
-            var check = navigator.userAgent.substring(navigator.userAgent.indexOf("9.00 (") + 28,navigator.userAgent.indexOf(") Apple"));
-            if (check == "9.00") {
-                document.getElementById("FWVer").innerHTML = check;
-            }else {
-                alert("You are not on a 9.00 PS4\n" + check);
-                document.getElementById("FWVer").innerHTML = check;
-            }
-        }
         function loadmsg() {
             document.getElementById('notify').style.display = ''
             document.getElementById('notify').className = 'notification'
