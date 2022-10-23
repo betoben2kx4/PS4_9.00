@@ -1,9 +1,9 @@
 # PS4 Exploit HOST 9.00
 ---
-13-07-2022 v1.00 [Deleted ⚠]
+13-07-2022 v1.0 [Deleted ⚠]
 - v1.00 launch
 
-19-07-2022 v2.00 [Deleted ⚠]
+19-07-2022 v2.0 [Deleted ⚠]
 - Added favicon
 - Totally design change (to make it simple & minimalist)
 - Removed background image 
@@ -11,15 +11,15 @@
 27-07-2022 v2.1 [Deleted ⚠]
 - 900N added
 
-07-09-2022 v3.00 [Deleted ⚠]
+07-09-2022 v3.0 [Deleted ⚠]
 - Redesigned
 - 900N Removed
 
-26-09-2022 v4.00 [Deleted ⚠]
+26-09-2022 v4.0 [Deleted ⚠]
 - NEW Redesigned
 - Added ESP8266 Support (Soldered)
 
-07-10-2022 v5.00 [Deleted ⚠]
+07-10-2022 v5.0 [Deleted ⚠]
 - Simple Design
 - Check out yourself 😊
 
