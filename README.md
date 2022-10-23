@@ -1,7 +1,7 @@
 # PS4 Exploit HOST 9.00
 ---
 13-07-2022 v1.0 [Deleted ⚠]
-- v1.00 launch
+- v1.0 launch
 
 19-07-2022 v2.0 [Deleted ⚠]
 - Added favicon
