@@ -1,57 +1,26 @@
-var getPayload = function(payload, onLoadEndCallback) {
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', payload);
-  xhr.send();
-  xhr.responseType = "arraybuffer";
-  xhr.onload = function (event) {
-      if (onLoadEndCallback) onLoadEndCallback(xhr, event);
-  };
-}
-
-var sendPayload = function(url, data, onLoadEndCallback) {
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", url, true);
-  xhr.send(data);
-
-  xhr.onload = function (event) {
-      if (onLoadEndCallback) onLoadEndCallback(xhr, event);
-  };
-}
-
-function LoadviaGoldhen(PLfile){
-  var PS4IP = document.getElementById("psip").value;
-		var xhr = new XMLHttpRequest();
-    xhr.open("POST", `http://${PS4IP}:9090/status`);
-		xhr.send();
-		xhr.onerror = function(){
-            document.getElementById('notify').style.display = ''
-            document.getElementById('notify').className = 'notification'
-			document.getElementById('log').innerHTML = "Error, First Enable Binloader Server from GoldHEN Settings.";
-			alert('Error, First Enable Binloader Server from GoldHEN Settings.');
-			return;
-		};
-		xhr.onload = function(){
-			var responseJson = JSON.parse(xhr.responseText);
-			if (responseJson.status=="ready"){
-		  getPayload(PLfile, function (xhr) {
-				if ((xhr.status === 200 || xhr.status === 304) && xhr.response) {
-				   //Sending bins via IP POST Method
-           sendPayload(`http://${PS4IP}:9090`, xhr.response, function (xhr) {
-            if (xhr.status === 200) {
-              log.innerHTML="Payload Loaded.";
-			}else{
-				document.getElementById('notify').style.display = ''
-				document.getElementById('notify').className = 'notification'
-				document.getElementById('log').innerHTML="Can't send the payload.";
-               return;
-            }
-					})
-				}
-			});
-			}
-			else {
-				alert("Cannot Load Payload Because binloader Server Is Busy.");
-				return;
-			}
-		};
-	}
+function GetPL() {
+	var req=new XMLHttpRequest();req.open("GET","http://127.0.0.1:9090/status");req.send();
+	req.onerror=function(){alert("Cannot Load Payload Because The BinLoader Server Is Not Running!");return;};
+	req.onload=function(){
+	 var responseJson=JSON.parse(req.responseText);
+	 if(responseJson.status=="ready"){
+	  getPayload(PLfile,function(req){if((req.status===200||req.status===304)&&req.response){sendPayload("http://127.0.0.1:9090",req.response);}});
+	 }
+	 else{alert("Can't Load Payload Because The BinLoader Server Is Busy!");return;}
+	};
+	var getPayload=function(pl,onLoadEndCallback){
+	 var req=new XMLHttpRequest();req.open('GET',pl);req.send();req.responseType="arraybuffer";
+	 req.onload=function(event){if(onLoadEndCallback)onLoadEndCallback(req,event);};
+	};
+	var sendPayload=function(url,data,onLoadEndCallback){
+	 var req=new XMLHttpRequest();req.open("POST",url,true);req.send(data);
+	 req.onload=function(event){
+	  allset();
+	  if(onLoadEndCallback)onLoadEndCallback(req,event);
+	 };
+	};
+   }
+   
+   function allset() {
+   log.innerHTML="Payload loaded"
+   }

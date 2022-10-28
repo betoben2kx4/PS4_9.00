@@ -3,61 +3,61 @@ function app2usb() {
   document.getElementById('notify').className = 'notification'
   document.getElementById("log").innerHTML="Please wait... Sending Payload!";
   PLfile = "app2usb.bin";
-  LoadviaGoldhen(PLfile);
+  GetPL();
 }
 function gamedumper() {
   document.getElementById('notify').style.display = ''
   document.getElementById('notify').className = 'notification'
   document.getElementById("log").innerHTML="Please wait... Sending Payload!";
   PLfile = "appdumper.bin";
-  LoadviaGoldhen(PLfile);
+  GetPL();
 }
 function dupdate() {
   document.getElementById('notify').style.display = ''
   document.getElementById('notify').className = 'notification'
   document.getElementById("log").innerHTML="Please wait... Sending Payload!";
   PLfile = "dupdates.bin";
-  LoadviaGoldhen(PLfile);
+  GetPL();
 }
 function eupdate() {
   document.getElementById('notify').style.display = ''
   document.getElementById('notify').className = 'notification'
   document.getElementById("log").innerHTML="Please wait... Sending Payload!";
   PLfile = "eupdates.bin";
-  LoadviaGoldhen(PLfile);
+  GetPL();
 }
 function bdb() {
   document.getElementById('notify').style.display = ''
   document.getElementById('notify').className = 'notification'
   document.getElementById("log").innerHTML="Please wait... Sending Payload!";
   PLfile = "backup.bin";
-  LoadviaGoldhen(PLfile);
+  GetPL();
 }
 function rdb() {
   document.getElementById('notify').style.display = ''
   document.getElementById('notify').className = 'notification'
   document.getElementById("log").innerHTML="Please wait... Sending Payload!";
   PLfile = "restore.bin";
-  LoadviaGoldhen(PLfile);
+  GetPL();
 }
 function ps4debug() {
   document.getElementById('notify').style.display = ''
   document.getElementById('notify').className = 'notification'
   document.getElementById("log").innerHTML="Please wait... Sending Payload!";
   PLfile = "ps4debug.bin";
-  LoadviaGoldhen(PLfile);
+  GetPL();
 }
 function webrte() {
   document.getElementById('notify').style.display = ''
   document.getElementById('notify').className = 'notification'
   document.getElementById("log").innerHTML="Please wait... Sending Payload!";
   PLfile = "webrte.bin";
-  LoadviaGoldhen(PLfile);
+  GetPL();
 }
 function permanentuart() {
   document.getElementById('notify').style.display = ''
   document.getElementById('notify').className = 'notification'
   document.getElementById("log").innerHTML="Please wait... Sending Payload!";
   PLfile = "permanentuart.bin";
-  LoadviaGoldhen(PLfile);
+  GetPL();
 }
