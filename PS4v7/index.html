@@ -1293,7 +1293,7 @@
         }
         function goldhen(){
             document.getElementById('log').innerHTML = 'USB Exfat_hax Loaded Successfully! Jailbreak Done.' // by @bishalqx980
-            PLfile = "GoldHEN224.bin";
+            PLfile = "GoldHEN212.bin";
             setTimeout(loadBIN,1000);
         }
     </script>
@@ -1315,13 +1315,56 @@
             setTimeout(function(){document.getElementById("log").innerHTML="AppCache Completed. Turn off the Internet & reopen PS4 Browser!"; }, 1500);
         }
     </script>
+    <script> //Payload Sender to GoldHEN Binloader
+    function GetPL() {
+        var req=new XMLHttpRequest();req.open("GET","http://127.0.0.1:9090/status");req.send();
+        req.onerror=function(){alert("Cannot Load Payload Because The BinLoader Server Is Not Running!");return;};
+        req.onload=function(){
+         var responseJson=JSON.parse(req.responseText);
+         if(responseJson.status=="ready"){
+          getPayload(PLfile,function(req){if((req.status===200||req.status===304)&&req.response){sendPayload("http://127.0.0.1:9090",req.response);}});
+         }
+         else{alert("Can't Load Payload Because The BinLoader Server Is Busy!");return;}
+        };
+        var getPayload=function(pl,onLoadEndCallback){
+         var req=new XMLHttpRequest();req.open('GET',pl);req.send();req.responseType="arraybuffer";
+         req.onload=function(event){if(onLoadEndCallback)onLoadEndCallback(req,event);};
+        };
+        var sendPayload=function(url,data,onLoadEndCallback){
+         var req=new XMLHttpRequest();req.open("POST",url,true);req.send(data);
+         req.onload=function(event){
+          allset();
+          if(onLoadEndCallback)onLoadEndCallback(req,event);
+         };
+        };
+    }
+    function allset() {
+        log.innerHTML="Payload loaded!"
+    }  
+    function dupdate() {
+	    document.getElementById('notify').style.display = ''
+	    document.getElementById('notify').className = 'notification'
+	    document.getElementById("log").innerHTML="Please wait... Sending Payload!";
+	    PLfile = "dupdates.bin";
+	    GetPL();
+    }
+    function eupdate() {
+	    document.getElementById('notify').style.display = ''
+	    document.getElementById('notify').className = 'notification'
+	    document.getElementById("log").innerHTML="Please wait... Sending Payload!";
+	    PLfile = "eupdates.bin";
+	    GetPL();
+    }   
+    </script>
     <div id="notify" style="display: none;">
         <p id="log"></p>
     </div>
     <div class="title">
         <img src="ps4_logo.png" alt="">
     </div><br>
-    <button class="btn" onclick="poc()" id="tmp"><img src="GoldHEN.png" alt="PS4Slim Logo" width="100px"></button>
+    <button class="btn" onclick="poc()" id="tmp"><img src="GoldHEN.png" alt="PS4Slim Logo" width="100px"><br><span>GoldHEN</span></button>
+    <button class="btn" onclick="eupdate()" id="tmp"><img src="Enable.png" alt="Enable Update" width="100px"><br><span>Enable Update</span></button>
+    <button class="btn" onclick="dupdate()" id="tmp"><img src="Disable.png" alt="Disable Update" width="100px"><br><span>Disable Update</span></button>
     <div class="bottomSec">
         <span class="credits">Web-Design and Hosted by <a href="https://bishalqx980.github.io/bishalqx980/" class="bishalqx980">@bishalqx980</a></span><br>
         <span class="credits">Many Many Thanks To All contributor's of PS4 Scene</span>
@@ -1330,7 +1373,7 @@
         function loadmsg() {
             document.getElementById('notify').style.display = ''
             document.getElementById('notify').className = 'notification'
-            document.getElementById('log').innerHTML = 'Insert USB Now...Triggering Exploit!'
+            document.getElementById('log').innerHTML = 'Please Wait...Triggering Exploit!'
         }
     </script>
     <style>
@@ -1375,16 +1418,19 @@
         }
         .btn {
             background: rgb(27, 107, 180);
-            border: none;
+            color: rgb(255, 255, 255);
+            width: 130px;
+            border: solid 2px rgb(27, 107, 180);
             border-radius: 10px;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
             font-style: italic;
+            font-weight: bold;
             padding: 5px;
             cursor: pointer;
             transition-duration: 300ms;
         }
         .btn:hover {
-            padding: 10px;
+            background: rgba(0, 0, 0, 0.01);
         }
         .bottomSec {
             bottom: 0;
