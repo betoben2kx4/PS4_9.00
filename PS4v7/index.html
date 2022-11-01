@@ -1249,7 +1249,7 @@
                     if (this.status == 200) {
                         payload = this.response;
                         SendPayload();
-                        allset();
+                        GoldHENSET();
                     }
                     else
                     {
@@ -1288,7 +1288,7 @@
         function jbdone() {
         goldhen();
         }    
-        function allset() {
+        function GoldHENSET() {
             document.getElementById('log').innerHTML = 'GoldHEN Loaded! Enjoy 🥳' // by @bishalqx980
         }
         function goldhen(){
@@ -1333,18 +1333,19 @@
         var sendPayload=function(url,data,onLoadEndCallback){
          var req=new XMLHttpRequest();req.open("POST",url,true);req.send(data);
          req.onload=function(event){
-          allset();
+          PayloadLoaded();
           if(onLoadEndCallback)onLoadEndCallback(req,event);
          };
         };
     }
-    function allset() {
-        log.innerHTML="Payload loaded!"
+    function PayloadLoaded() {
+        log.innerHTML="Payload loaded! Enjoy 🥳"
     }  
     function dupdate() {
 	    document.getElementById('notify').style.display = ''
 	    document.getElementById('notify').className = 'notification'
 	    document.getElementById("log").innerHTML="Please wait... Sending Payload!";
+        setTimeout(ani2, 5000);
 	    PLfile = "dupdates.bin";
 	    GetPL();
     }
@@ -1352,12 +1353,14 @@
 	    document.getElementById('notify').style.display = ''
 	    document.getElementById('notify').className = 'notification'
 	    document.getElementById("log").innerHTML="Please wait... Sending Payload!";
+        setTimeout(ani2, 5000);
 	    PLfile = "eupdates.bin";
 	    GetPL();
     }   
     </script>
     <div id="notify" style="display: none;">
         <p id="log"></p>
+        <div class="loading"></div>
     </div>
     <div class="title">
         <img src="ps4_logo.png" alt="">
@@ -1374,6 +1377,14 @@
             document.getElementById('notify').style.display = ''
             document.getElementById('notify').className = 'notification'
             document.getElementById('log').innerHTML = 'Insert USB Now...Triggering Exploit!'
+            setTimeout(ani2, 5000);
+        }
+        function ani2() {
+            document.getElementById('notify').className = 'notification2'
+            setTimeout(hide, 400)
+        }
+        function hide() {
+            document.getElementById('notify').style.display = 'none'
         }
     </script>
     <style>
@@ -1407,6 +1418,40 @@
             }
             to {
                 transform: translateX(0%);
+            }
+        }
+        .notification2 {
+            top: 4%;
+            right: 2%;
+            position: fixed;
+            background-color: rgba(30, 30, 50, 0.5);
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px;
+            font-weight: bold;
+            animation: slide2 500ms;
+        }
+        @keyframes slide2 {
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(120%);
+            }
+        }
+        .loading {
+            padding: 2px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50px;
+            animation: loadingTime 5s linear;
+        }
+        @keyframes loadingTime {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 100%;
             }
         }
         .title {
