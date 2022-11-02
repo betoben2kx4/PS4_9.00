@@ -1289,12 +1289,13 @@
         goldhen();
         }    
         function GoldHENSET() {
-            document.getElementById('log').innerHTML = 'GoldHEN Loaded! Enjoy 🥳' // by @bishalqx980
+            document.getElementById('TimeoutScale').className = 'loading'
+            document.getElementById('log').innerHTML = 'GoldHEN Loaded! Enjoy 🥳'
+            setTimeout(ani2, 5000);
         }
         function goldhen(){
             document.getElementById('log').innerHTML = 'USB Exfat_hax Loaded Successfully! Jailbreak Done.' // by @bishalqx980
-            PLfile = "GoldHEN212.bin";
-            setTimeout(loadBIN,1000);
+            PLfile = "GoldHEN224.bin";
         }
     </script>
     <script> //cache
@@ -1339,13 +1340,14 @@
         };
     }
     function PayloadLoaded() {
-        log.innerHTML="Payload loaded! Enjoy 🥳"
+	    document.getElementById('TimeoutScale').className = 'loading'
+	    document.getElementById("log").innerHTML="Payload loaded! Enjoy 🥳";
+        setTimeout(ani2, 5000);
     }  
     function dupdate() {
 	    document.getElementById('notify').style.display = ''
 	    document.getElementById('notify').className = 'notification'
 	    document.getElementById("log").innerHTML="Please wait... Sending Payload!";
-        setTimeout(ani2, 5000);
 	    PLfile = "dupdates.bin";
 	    GetPL();
     }
@@ -1353,14 +1355,13 @@
 	    document.getElementById('notify').style.display = ''
 	    document.getElementById('notify').className = 'notification'
 	    document.getElementById("log").innerHTML="Please wait... Sending Payload!";
-        setTimeout(ani2, 5000);
 	    PLfile = "eupdates.bin";
 	    GetPL();
     }   
     </script>
     <div id="notify" style="display: none;">
         <p id="log"></p>
-        <div class="loading"></div>
+        <div id="TimeoutScale"></div>
     </div>
     <div class="title">
         <img src="ps4_logo.png" alt="">
@@ -1376,8 +1377,7 @@
         function loadmsg() {
             document.getElementById('notify').style.display = ''
             document.getElementById('notify').className = 'notification'
-            document.getElementById('log').innerHTML = 'Insert USB Now...Triggering Exploit!'
-            setTimeout(ani2, 5000);
+            document.getElementById('log').innerHTML = 'Please Wait...Triggering Exploit!'
         }
         function ani2() {
             document.getElementById('notify').className = 'notification2'
@@ -1451,7 +1451,7 @@
                 width: 0%;
             }
             to {
-                width: 100%;
+                width: 98%;
             }
         }
         .title {
