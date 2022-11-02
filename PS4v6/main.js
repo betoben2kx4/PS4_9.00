@@ -22,5 +22,7 @@ function GetPL() {
    }
    
    function allset() {
-   log.innerHTML="Payload loaded"
+	document.getElementById('TimeoutScale').className = 'loading'
+	document.getElementById("log").innerHTML="Payload loaded! Enjoy 🥳";
+	setTimeout(ani2, 5000);
    }

@@ -50,9 +50,11 @@ function jbdone() {
 goldhen();
 }    
 function allset() {
-    document.getElementById('notify').style.display = '' // by @bishalqx980
-    document.getElementById('notify').className = 'notification' // by @bishalqx980
-    document.getElementById('log').innerHTML = 'GoldHEN Loaded! Enjoy 🥳' // by @bishalqx980
+    document.getElementById('notify').style.display = ''
+    document.getElementById('notify').className = 'notification'
+    document.getElementById('TimeoutScale').className = 'loading'
+    document.getElementById('log').innerHTML = 'GoldHEN Loaded! Enjoy 🥳'
+    setTimeout(ani2, 5000);
 }
 function goldhen(){
     document.getElementById('notify').style.display = '' // by @bishalqx980
