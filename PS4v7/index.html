@@ -118,7 +118,7 @@
         var HAMMER_FONT_NAME = "font8"; //must take bucket 3 of 8 (counting from zero)
         var HAMMER_NSTRINGS = 700; //tweak this if crashing during hammer time    
         function poc() {
-        loadmsg() // by @bishalqx980
+        loadmsg() 
         function hex(n)
         {
             if((typeof n) != "number")
@@ -1294,8 +1294,9 @@
             setTimeout(ani2, 5000);
         }
         function goldhen(){
-            document.getElementById('log').innerHTML = 'USB Exfat_hax Loaded Successfully! Jailbreak Done.' // by @bishalqx980
-            PLfile = "GoldHEN224.bin";
+            document.getElementById('log').innerHTML = 'USB Exfat_hax Loaded Successfully! Jailbreak Done.'
+            PLfile = "GoldHEN212.bin"
+            setTimeout(loadBIN,1000);
         }
     </script>
     <script> //cache
@@ -1315,7 +1316,7 @@
             document.getElementById('TimeoutScale').className = 'loading'
             document.getElementById("log").innerHTML="Page Cached Successfully!";
             setTimeout(function(){document.getElementById("log").innerHTML="AppCache Completed. Turn off the Internet & reopen PS4 Browser!"; }, 1500);
-	setTimeout(ani2, 5000);
+            setTimeout(ani2, 5000);
         }
     </script>
     <script> //Payload Sender to GoldHEN Binloader
@@ -1368,7 +1369,7 @@
     <div class="title">
         <img src="ps4_logo.png" alt="">
     </div><br>
-    <button class="btn" onclick="poc()" id="tmp"><img src="GoldHEN.png" alt="PS4Slim Logo" width="100px"><br><span>GoldHEN 2.2.4</span></button>
+    <button class="btn" onclick="poc()" id="tmp"><img src="GoldHEN.png" alt="PS4Slim Logo" width="100px"><br><span>GoldHEN 2.1.2</span></button>
     <button class="btn" onclick="eupdate()" id="tmp"><img src="Enable.png" alt="Enable Update" width="100px"><br><span>Enable Update</span></button>
     <button class="btn" onclick="dupdate()" id="tmp"><img src="Disable.png" alt="Disable Update" width="100px"><br><span>Disable Update</span></button>
     <div class="bottomSec">
@@ -1379,7 +1380,7 @@
         function loadmsg() {
             document.getElementById('notify').style.display = ''
             document.getElementById('notify').className = 'notification'
-            document.getElementById('log').innerHTML = 'Insert USB Now...Triggering Exploit!'
+            document.getElementById('log').innerHTML = 'Please Wait...Triggering Exploit!'
         }
         function ani2() {
             document.getElementById('notify').className = 'notification2'
