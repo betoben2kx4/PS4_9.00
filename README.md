@@ -32,3 +32,8 @@
 
 22-10-2022 V7.00 [Online ✅]
 - New Design https://bishalqx980.github.io/PS4_9.00/PS4v7/
+
+05-11-2022 V8.00 [Online ✅]
+- A complete HOST with All Payload's & GameMod's (GTAV, RDR2)
+- Many More...Try YourSelf!!
+- https://bishalqx980.github.io/PS4_9.00/V8/
