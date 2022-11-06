@@ -15,7 +15,7 @@ function GetPL() {
 	var sendPayload=function(url,data,onLoadEndCallback){
 	 var req=new XMLHttpRequest();req.open("POST",url,true);req.send(data);
 	 req.onload=function(event){
-	  allset();
+		PayloadSet();
 	  if(onLoadEndCallback)onLoadEndCallback(req,event);
 	 };
 	};
@@ -25,7 +25,7 @@ function GetPL() {
 	document.getElementById("log").innerHTML="Enable Binloader Server from GoldHEN Setting's!";
 	setTimeout(ani2, 5000);
    }
-   function allset() {
+   function PayloadSet() {
 	document.getElementById('TimeoutScale').className = 'loading'
 	document.getElementById("log").innerHTML="Payload loaded! Enjoy 🥳";
 	setTimeout(ani2, 5000);

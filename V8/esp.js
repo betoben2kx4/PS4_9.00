@@ -10,7 +10,7 @@ function loadBIN(){
             if (this.status == 200) {
                 payload = this.response;
                 SendPayload();
-                allset();
+                HenSet();
             }
             else
             {
@@ -49,7 +49,7 @@ function sleep(ms) {
 function jbdone() {
 goldhen();
 }    
-function allset() {
+function HenSet() {
     document.getElementById('notify').style.display = ''
     document.getElementById('notify').className = 'notification'
     document.getElementById('TimeoutScale').className = 'loading'

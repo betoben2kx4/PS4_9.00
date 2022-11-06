@@ -177,3 +177,10 @@ body {
 .bishalqx980:hover {
     text-decoration: underline;
 }
+hr {
+    opacity: 20%;
+    width: 80%;
+}
+#sysinfo {
+    font-size: 12px;
+}

@@ -1,5 +1,5 @@
 function load() {
-    onlineChk()
+    onlineChk();sysinfo()
 }
 function onlineChk() {
     var check = navigator.onLine
@@ -8,6 +8,9 @@ function onlineChk() {
     }else {
         document.getElementById("onlineCheckResult").innerHTML = "Cached"
     }
+}
+function sysinfo() {
+    document.getElementById("sysinfo").innerHTML = navigator.userAgent
 }
 function GMJS() {
     var check = document.getElementById("GM").style
@@ -33,7 +36,7 @@ function LMJS() {
 function loadmsg() {
     document.getElementById('notify').style.display = ''
     document.getElementById('notify').className = 'notification'
-    document.getElementById('log').innerHTML = 'Please Wait...Triggering Exploit!'
+    document.getElementById('log').innerHTML = 'Insert USB Now...Triggering Exploit!'
 }
 function ani2() {
     document.getElementById('notify').className = 'notification2'
