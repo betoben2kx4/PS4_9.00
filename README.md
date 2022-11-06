@@ -37,3 +37,6 @@
 - A complete HOST with All Payload's & GameMod's (GTAV, RDR2)
 - Many More...Try YourSelf!!
 - https://bishalqx980.github.io/PS4_9.00/V8/
+
+06-11-2022 V8.1 [Online ✅]
+- Some Bug Fix
