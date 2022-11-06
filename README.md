@@ -27,10 +27,10 @@
 - Bug FIX
 - Added Web Payload Sender
 
-13-10-2022 V6.0 [Deleted ⚠]
+13-10-2022 V6.0 [Online ✅]
 - Surprise 💣
 
-22-10-2022 V7.00 [Deleted ⚠]
+22-10-2022 V7.00 [Online ✅]
 - New Design https://bishalqx980.github.io/PS4_9.00/PS4v7/
 
 05-11-2022 V8.00 [Online ✅]
