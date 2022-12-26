@@ -42,3 +42,6 @@
 - Some Bug Fix
 
 25-12-2022 V8.2 [Online ✅]
+- Stablility Improved
+- Faster JB
+- Bug Fix [Payload Now Work Perfect]
