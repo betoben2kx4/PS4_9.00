@@ -40,9 +40,10 @@
 06-11-2022 V8.1 [Deleted ⚠]
 - Some Bug Fix
 
-25-12-2022 V8.2 [Deleted ⚠]
+25-12-2022 V8.2 [✅ Online]
 - Stablility Improved
 - Faster JB
 - Bug Fix [Payload Now Work Perfect]
-04-01-2023 v9.00
+
+04-01-2023 v9.00 [✅ Online]
 - New Design [made simple]
