@@ -17,7 +17,6 @@
 
 26-09-2022 v4.0 [Deleted ⚠]
 - NEW Redesigned
-- Added ESP8266 Support (Soldered)
 
 07-10-2022 v5.0 [Deleted ⚠]
 - Simple Design
@@ -41,7 +40,9 @@
 06-11-2022 V8.1 [Deleted ⚠]
 - Some Bug Fix
 
-25-12-2022 V8.2 [Online ✅]
+25-12-2022 V8.2 [Deleted ⚠]
 - Stablility Improved
 - Faster JB
 - Bug Fix [Payload Now Work Perfect]
+04-01-2023 v9.00
+- New Design [made simple]
