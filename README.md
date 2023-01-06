@@ -32,12 +32,12 @@
 22-10-2022 V7.00 [Deleted ⚠]
 - New Design https://bishalqx980.github.io/PS4_9.00/PS4v7/
 
-05-11-2022 V8.00 [Deleted ⚠]
+05-11-2022 V8.00 [Updated to v8.2]
 - A complete HOST with All Payload's & GameMod's (GTAV, RDR2)
 - Many More...Try YourSelf!!
 - https://bishalqx980.github.io/PS4_9.00/V8/
 
-06-11-2022 V8.1 [Deleted ⚠]
+06-11-2022 V8.1 [Updated to v8.2]
 - Some Bug Fix
 
 25-12-2022 V8.2 [✅ Online]
@@ -45,5 +45,10 @@
 - Faster JB
 - Bug Fix [Payload Now Work Perfect]
 
-04-01-2023 v9.00 [✅ Online]
+04-01-2023 v9.00 [Updated to v9.1]
 - New Design [made simple]
+
+06-01-2023 v9.1 [✅ Online]
+- Auto Cache added
+- Removed Manual Cache Button
+- Added Waiting Notification
