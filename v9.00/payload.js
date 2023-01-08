@@ -90,6 +90,12 @@ function permanentuart() {
   PLfile = "permanentuart.bin"
   loadBIN()
 }
+function orbisToolBox() {
+  ShowMSG = "Please wait...Sending Payload!"
+  loadmsg()
+  PLfile = "Orbis-Toolbox.bin"
+  loadBIN()
+}
 function ps4debug() {
   ShowMSG = "Please wait...Sending Payload!"
   loadmsg()

@@ -85,8 +85,8 @@
         .blue {
             color: rgb(0, 100, 255);
         }
-        .paste {
-            color: rgb(0, 255, 255);
+        .gray {
+            color: rgb(100, 100, 100);
         }
         .brown {
             color: rgb(150, 50, 0);
@@ -708,9 +708,9 @@
             chain.run();    
             //Trigger OOB
             //alert("Insert USB now! Remove after Jailbreak Done...")
-            sleep(10000).then(() => {
+            setTimeout(() => {
             //Trigger corrupt knote
-            {
+                {
                 for (var i = 1; i < NUM_KQUEUES; i += 2) {
                     chain.fcall(window.syscalls[6], kqueues[i]);
                 }
@@ -733,12 +733,12 @@
                     chain.fcall(patch_buffer, p.read8(KERNEL_BASE_PTR));
                     chain.fcall(window.syscalls[73], patch_buffer, 0x4000);
                     chain.run();   
-                    setTimeout(jbdone, 100);
+                    jbdone()
                 }else {
                     alert("Exploit Failed, try again or Clear webdata and cookie then try! or Reboot PS4.");
                     p.write8(0, 0);
                 }
-            });
+            }, 10000);
         }
     </script>
     <!--rop-->
@@ -1383,8 +1383,10 @@
     </script>
     <!--Jailbreak-->
     <script>
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
+        function load() {
+            ShowMSG = "Please wait, Preparing for Exploit!"
+            loadmsg()
+            setTimeout(poc, 500)
         }
         function jbdone() {
             ShowMSG = "Jailbreak Done! Now Load GoldHEN..."
@@ -1399,7 +1401,7 @@
     </script>
     <script src="./payload.js"></script>
 </head>
-<body onload="setTimeout(poc, 500)">
+<body onload="load()">
     <!--Notification Area-->
     <div id="notify" style="display: none;">
         <p id="log"></p>
@@ -1431,18 +1433,19 @@
         <button class="btn brown" onclick="moduledumper()">Dump Module</button>
         <button class="btn" onclick="permanentuart()">Permanent UART</button>
         <br>
+        <button class="btn red" onclick="orbisToolBox()">Orbis-ToolBox</button>
         <button class="btn green" onclick="ps4debug()">PS4 Debug</button>
         <button class="btn" onclick="rifrenamer()">RIF Renamer</button>
         <button class="btn red" onclick="todex()">To-Dex</button>
         <button class="btn blue" onclick="webrte900()">Web-RTE</button>
         <br>
-        <button class="btn paste" onclick="BeefQueefMod100()">BeefQueff 1.00</button>
-        <button class="btn paste" onclick="BeefQueefMod134()">BeefQueff 1.34</button>
-        <button class="btn paste" onclick="BeefQueefMod138()">BeefQueff 1.38</button>
+        <button class="btn gray" onclick="BeefQueefMod100()">BeefQueff 1.00</button>
+        <button class="btn gray" onclick="BeefQueefMod134()">BeefQueff 1.34</button>
+        <button class="btn gray" onclick="BeefQueefMod138()">BeefQueff 1.38</button>
         <br>
-        <button class="btn paste" onclick="GTAVAG127()">ArabicGuy 1.27</button>
-        <button class="btn paste" onclick="GTAVAG132()">ArabicGuy 1.32</button>
-        <button class="btn paste" onclick="GTAVAG133()">ArabicGuy 1.33</button>
+        <button class="btn gray" onclick="GTAVAG127()">ArabicGuy 1.27</button>
+        <button class="btn gray" onclick="GTAVAG132()">ArabicGuy 1.32</button>
+        <button class="btn gray" onclick="GTAVAG133()">ArabicGuy 1.33</button>
         <br>
         <button class="btn red" onclick="OystersMenuRDR2v138_v100()">OysterMenu 1.00</button>
         <button class="btn red" onclick="OystersMenuRDR2v138_v113()">OysterMenu 1.13</button>
@@ -1457,7 +1460,7 @@
         <button class="btn" onclick="LinuxLoader5gb()">Linux 5GB</button>
     </div>
     <div class="bottom">
-        <p>Web-Design & Hosted by <a href="https://bishalqx980.github.io/bishalqx980" style="color: rgb(0, 100, 255);">@bishalqx980</a></p>
+        <p>Web-Design/Developed & Hosted by <a href="https://bishalqx980.github.io/bishalqx980" style="color: rgb(0, 100, 255);">@bishalqx980</a></p>
         <p>Many Many Thanks To All contributor's of PlayStation Jailbreak Scene</p>
     </div>
 </body>
