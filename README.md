@@ -52,6 +52,9 @@
 - Auto Cache added
 - Removed Manual Cache Button
 
-08-01-2023 v9.1.1 [✅ Online]
+08-01-2023 v9.1.1 [Updated to v9.1.2]
 - Added Orbis-ToolBox Payload
 - Added Waiting Notification
+
+10-01-2023 v9.1.2 [✅ Online]
+- HOST FIX ★ 
