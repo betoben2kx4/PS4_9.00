@@ -7,7 +7,7 @@
     <title>Caching - Please wait!</title>
     <style>
         body {
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(32, 33, 36);
             color: rgb(255, 255, 255);
             font-family: sans-serif;
             text-align: center;
@@ -20,16 +20,32 @@
             transform: translateY(-50%);
         }
         .div0 {
-            background-color: rgb(255, 255, 255);
-            color: rgb(0, 0, 0);
-            border: solid 2px rgb(255, 255, 255);
+            background-color: rgb(32, 33, 36);
+            color: rgb(255, 255, 255);
+            border: solid 2px rgb(53, 54, 58);
             border-radius: 5px;
             overflow: hidden;
         }
         #log {
-            background-color: rgb(0, 100, 255);
+            background-color: rgb(53, 54, 58);
             padding: 10px;
             font-weight: bold;
+        }
+        .btn {
+            background-color: rgb(32, 33, 36);
+            color: rgb(255, 255, 255);
+            border: solid 1px rgb(53, 54, 58);
+            border-radius: 10px;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition-duration: 300ms;
+        }
+        .btn:hover {
+            background-color: rgb(53, 54, 58);
+        }
+        a {
+            color: rgb(0, 100, 255);
         }
     </style>
     <!--Cache JS-->
@@ -59,7 +75,8 @@
     <div class="div0">
         <div id="log">0%</div>
     </div>
-    <p><b>Note:</b> After Cache proccess Completed this page will redirect to <a href="./index.html">index.html</a> page then you have to reopen the PS4 Browser! [Required for Smooth Performance]</p>
+    <br>
+    <a href="./lndex.html"><button class="btn">Skip Offline Cache</button></a>
     <p>Developed, Web-Design & Hosted by <a href="https://bishalqx980.github.io/bishalqx980/">@bishalqx980</a></p>
 </body>
 </html>
